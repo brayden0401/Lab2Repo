@@ -54,8 +54,20 @@ class BinarySearchTree{
    /*
    pre-order traversal
    */
+   
+   /**
+    * A method that traverses the tree in the pre order
+    * @param root node of tree
+    */
    public void preOrderTraversal(Node root){
       //implement me
+      if(root == null){
+         return;
+      }
+
+      System.out.print(root.value + " ");
+      preOrderTraversal(root.left);
+      preOrderTraversal(root.right);
    }
 
    
