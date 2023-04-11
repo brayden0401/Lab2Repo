@@ -75,7 +75,7 @@ class BinarySearchTree{
    /*
    in-order traversal
    */
-  
+
    /**
     * A method that traverses the tree in order
     * @param root node of tree 
@@ -96,8 +96,21 @@ class BinarySearchTree{
    /*
    post-order traversal
    */
+
+   /**
+    * A method that traverses the tree in pre order
+    * @param root node of tree
+    */
    public void postOrderTraversal(Node root){
       //implement me
+
+      if(root == null){
+         return;
+      }
+
+      postOrderTraversal(root.left);
+      postOrderTraversal(root.right);
+      System.out.print(root.value + " ");
    }
    
    
