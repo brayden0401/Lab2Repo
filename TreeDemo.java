@@ -161,7 +161,7 @@ class BinarySearchTree{
       if(root.left == null){
          return root.value;
       }
-      return getMax(root.left);
+      return getMin(root.left);
    }
   
   
@@ -170,8 +170,18 @@ class BinarySearchTree{
    a method to find the node in the tree
    with a largest key
    */
+
+   /**
+    * Method that finds the largest element in the tree
+    * @param root node of tree
+    * @return largest element in tree
+    */
    public int getMax(Node root){
 	  //implement me
+     if(root.right == null){
+         return root.value;
+     }
+     return getMax(root.right);
    }
    
    
